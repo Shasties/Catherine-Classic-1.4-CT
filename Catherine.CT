@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"P2 Entity Pointer"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Catherine.exe+95FD68</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"P2 X"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"P2 X "</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>Catherine.exe+95FD68</Address>
+          <Offsets>
+            <Offset>6C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>16</ID>
+          <Description>"P2 X''"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>Catherine.exe+95FD68</Address>
+          <Offsets>
+            <Offset>88</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"P2 Y"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"P2 Y"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>Catherine.exe+95FD68</Address>
+          <Offsets>
+            <Offset>8C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"P2 Y'"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>Catherine.exe+95FD68</Address>
+          <Offsets>
+            <Offset>70</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"P2 Z"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"P2 Z"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>Catherine.exe+95FD68</Address>
+          <Offsets>
+            <Offset>90</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"Stage?"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Catherine.exe+952DD4</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>26</ID>
+          <Description>"Fallout1"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>Catherine.exe+952DD4</Address>
+          <Offsets>
+            <Offset>3C020</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>27</ID>
+          <Description>"Fallout2"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>Catherine.exe+952DD4</Address>
+          <Offsets>
+            <Offset>3C2E8</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>32</ID>
+      <Description>"P2 current item"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Catherine.exe+95FD68</Address>
+      <Offsets>
+        <Offset>E4</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>41</ID>
+      <Description>"P1 Entity Pointer"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Catherine.exe+95FD64</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>42</ID>
+      <Description>"P1 X"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Catherine.exe+95FD64</Address>
+      <Offsets>
+        <Offset>6C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>43</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>169DD4F1</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>44</ID>
+      <Description>"ignore_pins"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : Catherine.exe
+  Version: 
+  Date   : 2021-02-24
+  Author : Drew
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(ignore_pins,Catherine.exe,F6 40 0C 80 74 40) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  nop
+  je Catherine.exe+30C95E
+  jmp return
+
+ignore_pins:
+  jmp newmem
+  nop
+return:
+registersymbol(ignore_pins)
+
+[DISABLE]
+
+ignore_pins:
+  db F6 40 0C 80 74 40
+
+unregistersymbol(ignore_pins)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Catherine.exe+30C918
+
+Catherine.exe+30C8FB: 8D 45 A8              - lea eax,[ebp-58]
+Catherine.exe+30C8FE: 50                    - push eax
+Catherine.exe+30C8FF: E8 6C 37 00 00        - call Catherine.exe+310070
+Catherine.exe+30C904: FF 75 98              - push [ebp-68]
+Catherine.exe+30C907: 8B CF                 - mov ecx,edi
+Catherine.exe+30C909: FF 75 94              - push [ebp-6C]
+Catherine.exe+30C90C: FF 75 A8              - push [ebp-58]
+Catherine.exe+30C90F: E8 AC 97 00 00        - call Catherine.exe+3160C0
+Catherine.exe+30C914: 85 C0                 - test eax,eax
+Catherine.exe+30C916: 74 06                 - je Catherine.exe+30C91E
+// ---------- INJECTING HERE ----------
+Catherine.exe+30C918: F6 40 0C 80           - test byte ptr [eax+0C],-80
+// ---------- DONE INJECTING  ----------
+Catherine.exe+30C91C: 74 40                 - je Catherine.exe+30C95E
+Catherine.exe+30C91E: 81 67 10 FF BF FF FF  - and [edi+10],FFFFBFFF
+Catherine.exe+30C925: 83 67 0C FE           - and dword ptr [edi+0C],-02
+Catherine.exe+30C929: 6A 00                 - push 00
+Catherine.exe+30C92B: 6A 2D                 - push 2D
+Catherine.exe+30C92D: E9 44 0B 00 00        - jmp Catherine.exe+30D476
+Catherine.exe+30C932: F6 C1 02              - test cl,02
+Catherine.exe+30C935: 0F 84 68 01 00 00     - je Catherine.exe+30CAA3
+Catherine.exe+30C93B: 8B 4F 28              - mov ecx,[edi+28]
+Catherine.exe+30C93E: 6A 00                 - push 00
+}
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>33</ID>
+      <Description>"turn_items_to_x"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : Catherine.exe
+  Version: 
+  Date   : 2021-02-23
+  Author : Drew
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(grab_item_p2,Catherine.exe,89 97 E4 00 00 00) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov [edi+000000E4],(int)5
+  jmp return
+
+grab_item_p2:
+  jmp newmem
+  nop
+return:
+registersymbol(grab_item_p2)
+
+[DISABLE]
+
+grab_item_p2:
+  db 89 97 E4 00 00 00
+
+unregistersymbol(grab_item_p2)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Catherine.exe+319EC8
+
+Catherine.exe+319EA1: 83 F8 01           - cmp eax,01
+Catherine.exe+319EA4: 74 05              - je Catherine.exe+319EAB
+Catherine.exe+319EA6: 83 F8 08           - cmp eax,08
+Catherine.exe+319EA9: 75 05              - jne Catherine.exe+319EB0
+Catherine.exe+319EAB: B9 F7 03 00 00     - mov ecx,000003F7
+Catherine.exe+319EB0: E8 CB 4C 07 00     - call Catherine.exe+38EB80
+Catherine.exe+319EB5: B9 D5 00 00 00     - mov ecx,000000D5
+Catherine.exe+319EBA: E8 C1 4C 07 00     - call Catherine.exe+38EB80
+Catherine.exe+319EBF: 8B 87 30 02 00 00  - mov eax,[edi+00000230]
+Catherine.exe+319EC5: 8B 56 1C           - mov edx,[esi+1C]
+// ---------- INJECTING HERE ----------
+Catherine.exe+319EC8: 89 97 E4 00 00 00  - mov [edi+000000E4],edx
+// ---------- DONE INJECTING  ----------
+Catherine.exe+319ECE: 83 F8 02           - cmp eax,02
+Catherine.exe+319ED1: 7D 17              - jnl Catherine.exe+319EEA
+Catherine.exe+319ED3: 8B 0D E4 2C F5 00  - mov ecx,[Catherine.exe+952CE4]
+Catherine.exe+319ED9: 50                 - push eax
+Catherine.exe+319EDA: 6A 01              - push 01
+Catherine.exe+319EDC: 8B 89 C0 00 00 00  - mov ecx,[ecx+000000C0]
+Catherine.exe+319EE2: E8 19 EA F9 FF     - call Catherine.exe+2B8900
+Catherine.exe+319EE7: 83 C4 08           - add esp,08
+Catherine.exe+319EEA: 8B CE              - mov ecx,esi
+Catherine.exe+319EEC: E8 CF 8D 00 00     - call Catherine.exe+322CC0
+}
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>39</ID>
+      <Description>"adjust_x"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : Catherine.exe
+  Version: 
+  Date   : 2021-02-23
+  Author : Drew
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+ 
+aobscanmodule(adjust_x,Catherine.exe,C7 87 BC 00 00 00 00 00 70 41) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov [edi+000000BC],40B00000
+  jmp return
+
+adjust_x:
+  jmp newmem
+  nop 5
+return:
+registersymbol(adjust_x)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+adjust_x:
+  db C7 87 BC 00 00 00 00 00 70 41
+
+unregistersymbol(adjust_x)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: Catherine.exe+318169
+
+Catherine.exe+31813B: 85 FF                          - test edi,edi
+Catherine.exe+31813D: 75 B4                          - jne Catherine.exe+3180F3
+Catherine.exe+31813F: 8B 7D E4                       - mov edi,[ebp-1C]
+Catherine.exe+318142: B9 05 01 00 00                 - mov ecx,00000105
+Catherine.exe+318147: E8 34 6A 07 00                 - call Catherine.exe+38EB80
+Catherine.exe+31814C: 0F 10 45 BC                    - movups xmm0,[ebp-44]
+Catherine.exe+318150: 0F 11 45 A8                    - movups [ebp-58],xmm0
+Catherine.exe+318154: E9 B5 01 00 00                 - jmp Catherine.exe+31830E
+Catherine.exe+318159: 8B 87 C0 00 00 00              - mov eax,[edi+000000C0]
+Catherine.exe+31815F: C7 87 B8 00 00 00 02 00 00 00  - mov [edi+000000B8],00000002
+// ---------- INJECTING HERE ----------
+Catherine.exe+318169: C7 87 BC 00 00 00 00 00 70 41  - mov [edi+000000BC],41700000
+// ---------- DONE INJECTING  ----------
+Catherine.exe+318173: 85 C0                          - test eax,eax
+Catherine.exe+318175: 78 06                          - js Catherine.exe+31817D
+Catherine.exe+318177: 50                             - push eax
+Catherine.exe+318178: E8 E3 96 FF FF                 - call Catherine.exe+311860
+Catherine.exe+31817D: B9 DC 59 D9 00                 - mov ecx,Catherine.exe+7959DC
+Catherine.exe+318182: E8 99 07 0A 00                 - call Catherine.exe+3B8920
+Catherine.exe+318187: 89 45 E8                       - mov [ebp-18],eax
+Catherine.exe+31818A: C7 45 FC 01 00 00 00           - mov [ebp-04],00000001
+Catherine.exe+318191: 8D 55 E8                       - lea edx,[ebp-18]
+Catherine.exe+318194: 8B 47 28                       - mov eax,[edi+28]
+}
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Structures StructVersion="2">
+    <Structure Name="pzlCharacter2" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="Pointer" Bytesize="4" OffsetHex="00000000" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="4" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000004" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="8" Vartype="Float" Bytesize="4" OffsetHex="00000008" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="12" Vartype="4 Bytes" Bytesize="4" RLECount="7" OffsetHex="0000000C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="40" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000028" Description="Pointer to instance of AwModel" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="48" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000030" Description="Pointer to instance of NiNode" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="56" Vartype="Float" Bytesize="4" OffsetHex="00000038" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="60" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000003C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="64" Vartype="Float" Bytesize="4" OffsetHex="00000040" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="68" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000044" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="100" Vartype="Double" Bytesize="8" OffsetHex="00000064" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="108" Vartype="4 Bytes" Bytesize="4" RLECount="11" OffsetHex="0000006C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="152" Vartype="Float" Bytesize="4" RLECount="4" OffsetHex="00000098" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="168" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000A8" DisplayMethod="Hexadecimal"/>
+        <Element Offset="172" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="000000AC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="188" Vartype="Float" Bytesize="4" OffsetHex="000000BC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="192" Vartype="4 Bytes" Bytesize="4" RLECount="7" OffsetHex="000000C0" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="220" Vartype="Double" Bytesize="8" OffsetHex="000000DC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="228" Vartype="4 Bytes" Bytesize="4" RLECount="12" OffsetHex="000000E4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="276" Vartype="Float" Bytesize="4" RLECount="3" OffsetHex="00000114" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="288" Vartype="4 Bytes" Bytesize="4" RLECount="15" OffsetHex="00000120" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="348" Vartype="Pointer" Bytesize="4" RLECount="5" OffsetHex="0000015C" Description="Pointer to instance of pzlEffect" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="368" Vartype="4 Bytes" Bytesize="4" RLECount="27" OffsetHex="00000170" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="476" Vartype="Double" Bytesize="8" OffsetHex="000001DC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="484" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="000001E4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="508" Vartype="Float" Bytesize="4" RLECount="3" OffsetHex="000001FC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="520" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000208" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="528" Vartype="Float" Bytesize="4" OffsetHex="00000210" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="532" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000214" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="548" Vartype="Float" Bytesize="4" RLECount="3" OffsetHex="00000224" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="560" Vartype="4 Bytes" Bytesize="4" RLECount="7" OffsetHex="00000230" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="588" Vartype="Float" Bytesize="4" OffsetHex="0000024C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="592" Vartype="Pointer" Bytesize="4" OffsetHex="00000250" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="596" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000254" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="600" Vartype="Pointer" Bytesize="4" OffsetHex="00000258" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="604" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000025C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="608" Vartype="Pointer" Bytesize="4" OffsetHex="00000260" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="612" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000264" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="616" Vartype="Pointer" Bytesize="4" OffsetHex="00000268" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="620" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000026C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="624" Vartype="Pointer" Bytesize="4" OffsetHex="00000270" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="628" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000274" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="632" Vartype="Pointer" Bytesize="4" OffsetHex="00000278" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="636" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000027C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="640" Vartype="Pointer" Bytesize="4" OffsetHex="00000280" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="644" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000284" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="648" Vartype="Pointer" Bytesize="4" OffsetHex="00000288" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="652" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000028C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="656" Vartype="Pointer" Bytesize="4" OffsetHex="00000290" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="660" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000294" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="664" Vartype="Pointer" Bytesize="4" OffsetHex="00000298" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="668" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000029C" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="672" Vartype="Pointer" Bytesize="4" OffsetHex="000002A0" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="676" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002A4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="680" Vartype="Pointer" Bytesize="4" OffsetHex="000002A8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="684" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002AC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="688" Vartype="Pointer" Bytesize="4" OffsetHex="000002B0" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="692" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002B4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="696" Vartype="Pointer" Bytesize="4" OffsetHex="000002B8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="700" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002BC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="704" Vartype="Pointer" Bytesize="4" OffsetHex="000002C0" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="708" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="000002C4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="732" Vartype="Float" Bytesize="4" OffsetHex="000002DC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="736" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002E0" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="740" Vartype="Float" Bytesize="4" RLECount="2" OffsetHex="000002E4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="748" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="000002EC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="764" Vartype="Float" Bytesize="4" OffsetHex="000002FC" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="768" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000300" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="772" Vartype="Pointer" Bytesize="4" OffsetHex="00000304" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="776" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000308" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="800" Vartype="Float" Bytesize="4" RLECount="824" OffsetHex="00000320" DisplayMethod="Unsigned Integer"/>
+      </Elements>
+    </Structure>
+  </Structures>
+</CheatTable>
